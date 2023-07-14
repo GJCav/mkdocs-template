@@ -1,0 +1,7 @@
+nav:
+- Basic Usage: basic-test.md
+- Math & Chinese: math.md
+- Navigation: nav-config.md
+- Extensions: extensions.md
+- Tag Example: tag-test.md
+- ...
