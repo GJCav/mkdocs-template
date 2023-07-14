@@ -26,10 +26,10 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: |
-          echo installing dependencies
-          cd mkdocs-material
-          git checkout 9.2.0b0
-          pip3 install -e .
-          cd ..
-          pip3 install -r requirements.txt
+          echo debug info
+          python3 --version
+          which pip
+          ls -lha
+          ls -lha mkdocs-material
+      - run: bash install.sh
       - run: mkdocs gh-deploy --force
