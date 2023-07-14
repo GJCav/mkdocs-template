@@ -1,0 +1,35 @@
+name: ci 
+on:
+  push:
+    branches:
+      - master 
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: "true"
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v3
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: |
+          echo installing dependencies
+          cd mkdocs-material
+          git checkout 9.2.0b0
+          pip3 install -e .
+          cd ..
+          pip3 install -r requirements.txt
+      - run: mkdocs gh-deploy --force

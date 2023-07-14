@@ -44,10 +44,10 @@ out-of-box features
     pip3 install -e .
     ```
 
-4. Install `awesome-pages`
+4. Install other requirements
 
     ``` bash
-    pip3 install mkdocs-awesome-pages-plugin
+    pip3 install -r requirements.txt
     ```
 
 4. Customize
