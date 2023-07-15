@@ -1,7 +1,20 @@
+######################################################
+# Change the values below to suit your project.      #
+#                                                    #
+######################################################
+
 site_name: mkdocs-template
 site_url: https://gjcav.github.io/mkdocs-template/
 repo_url: https://github.com/GJCav/mkdocs-template
 copyright: Copyright &copy; 2023 GJCav
+
+giscus: true
+
+
+######################################################
+# Do NOT edit the following code                     #
+#                                                    #
+######################################################
 
 theme: 
   name: material

@@ -68,7 +68,7 @@ Extensive configuration may occurs and these features are far from "out-of-box".
 
 4. Customize
 
-    Open file `mkdocs.yml` and modify the `site_name`, `site_url` and `repo_url`.
+    Open file `mkdocs.yml` and modify it to suit your project.
 
 
 **Live preview**

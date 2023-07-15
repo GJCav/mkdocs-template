@@ -52,6 +52,13 @@ Now the snippet should look similar to this
 </script>
 ```
 
+Finally, enable giscus in `mkdocs.yml`:
+
+``` yaml title="mkdocs.yml"
+giscus: true
+```
+
+
 ## Customize `comments.html` partial
 
 Follow the official guide but edit the `comments.html` from
@@ -66,7 +73,7 @@ Follow the official guide but edit the `comments.html` from
 to 
 
 ``` html title="revision" hl_lines="1"
-{% if not (page and page.meta and page.meta.disable_comments) %}
+{% if config.giscus and not (page and page.meta and page.meta.disable_comments) %}
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
   ...
 {% endif %}
