@@ -12,7 +12,7 @@ serve: blend-yml
 	mkdocs serve -f $(TMP_CONFIG)
 
 gh-deploy: blend-yml
-	mkdocs gh-deploy -f $(TMP_CONFIG)
+	mkdocs gh-deploy --force -f $(TMP_CONFIG)
 
 
 
