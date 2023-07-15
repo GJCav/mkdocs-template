@@ -4,7 +4,7 @@ This is a MkDocs-template project.
 
 ## Features
 
-out-of-box features
+**out-of-box** features
 
 * theme: [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) with version `9.2.0b0`
 * math support with MathJax3
@@ -15,6 +15,11 @@ out-of-box features
     !!! warning
         
         Chinese language is supported by Japanese language. So unwanted effects may occur.
+
+
+**advanced** features (extra configuration is required)
+
+* [Google Analytics](./mk-test/config-gtag.md)
 
 
 ## Quick start
@@ -56,14 +61,19 @@ out-of-box features
 
 
 **Live preview**
+
 ``` bash
-mkdocs serve
+make serve
 ```
 
 **Build**
 ``` bash
-mkdocs build
+make build
 ```
+
+??? note "Why using `make` instead of `mkdocs` ?"
+
+    To support advanced features, extra configuration is necessary, I write a `Makefile` for it.
 
 ## LICENSE
 

@@ -35,6 +35,6 @@ jobs:
         env:
           G_PROPERTY: ${{ vars.G_PROPERTY }}
       - run: bash install.sh
-      - run: mkdocs gh-deploy --force
+      - run: make gh-deploy
         env:
           G_PROPERTY: ${{ vars.G_PROPERTY }}
