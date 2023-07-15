@@ -1,4 +1,7 @@
+.EXPORT_ALL_VARIABLES:
+
 TMP_CONFIG=/tmp/mkdocs.yml
+CUSTOM_DIR=$(shell realpath overrides)
 
 all:
 	@echo "Usage: "
@@ -13,9 +16,6 @@ serve: blend-yml
 
 gh-deploy: blend-yml
 	mkdocs gh-deploy --force -f $(TMP_CONFIG)
-
-
-
 
 blend-yml:
 	echo "docs_dir: $(realpath docs)" > $(TMP_CONFIG)

@@ -4,7 +4,7 @@ This is a MkDocs-template project.
 
 ## Features
 
-**out-of-box** features
+### Out-of-box Features
 
 * theme: [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) with version `9.2.0b0`
 * math support with MathJax3
@@ -17,9 +17,20 @@ This is a MkDocs-template project.
         Chinese language is supported by Japanese language. So unwanted effects may occur.
 
 
-**advanced** features (extra configuration is required)
+
+### Advanced Features
+
+Extra but simple configuration is required to enable advanced features.
 
 * [Google Analytics](./mk-test/config-gtag.md)
+
+
+
+### Other Features
+
+Extensive configuration may occurs and these features are far from "out-of-box".
+
+* [comment system](./mk-test/test-comments.md) by [giscus](https://giscus.app/)
 
 
 ## Quick start

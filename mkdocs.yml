@@ -4,6 +4,7 @@ repo_url: https://github.com/GJCav/mkdocs-template
 
 theme: 
   name: material
+  custom_dir: !ENV [CUSTOM_DIR, "overrides"]
   features:
     - navigation.instant
     - navigation.tracking
