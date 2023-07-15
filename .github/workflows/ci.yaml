@@ -31,5 +31,10 @@ jobs:
           which pip
           ls -lha
           ls -lha mkdocs-material
+          echo "G_PROPERTY: $G_PROPERTY"
+        env:
+          G_PROPERTY: ${{ vars.G_PROPERTY }}
       - run: bash install.sh
       - run: mkdocs gh-deploy --force
+        env:
+          G_PROPERTY: ${{ vars.G_PROPERTY }}
